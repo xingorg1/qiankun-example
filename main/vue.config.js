@@ -6,5 +6,8 @@ module.exports = {
         args[0].title = '乾坤示例'
         return args
       })
+  },
+  devServer: {
+    port: 8888
   }
 }

@@ -1,4 +1,4 @@
-const { name } = require('../package.json')
+const { name } = require('./package.json')
 // 子应用`devServer`端口修改,跨域`headers`和`output`配置 
 module.exports = {
   publicPath: '/subapp/sub-vue',

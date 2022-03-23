@@ -2,6 +2,7 @@
   "eslint.workingDirectories": [
     "./main",
     "./sub-vue",
+    "./sub-vite",
     "./sub-react",
     "./common"
   ],

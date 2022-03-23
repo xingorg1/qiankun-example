@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import path from 'path'
 import qiankun from 'vite-plugin-qiankun';
-const { name } = require("../package.json");
+const { name } = require("./package.json");
 
 // useDevMode 开启时与热更新插件冲突
 const useDevMode = true

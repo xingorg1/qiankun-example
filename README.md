@@ -19,7 +19,7 @@ npm run install
 npm start
 ```
 
-通过 [http://localhost:8080/](http://localhost:8080/) 访问主应用。
+通过 [http://localhost:8888/](http://localhost:8888/) 访问主应用。
 
 ## 发布
 一键构建并打包所有主子应用
