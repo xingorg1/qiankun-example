@@ -7,6 +7,11 @@ const microApps = [
     activeRule: '/sub-vue' // 激活规则
   },
   {
+    name: 'sub-vite',
+    entry: process.env.VUE_APP_SUB_VITE,
+    activeRule: '/sub-vite'
+  },
+  {
     name: 'sub-react',
     entry: process.env.VUE_APP_SUB_REACT,
     activeRule: '/sub-react'
