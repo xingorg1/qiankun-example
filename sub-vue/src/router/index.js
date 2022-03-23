@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
-
+// 只暴露routes，new Router改到main.js中声明
 const routes = [
   {
     path: '/',

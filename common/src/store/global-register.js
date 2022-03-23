@@ -53,3 +53,12 @@ function registerGlobalModule (store, props = {}) {
 };
 
 export default registerGlobalModule;
+
+/**
+ * ps: 该方案也是有缺点的，由于子应用是在mount时才会同步父应用下发的state的。因此，它只适合每次只mount一个子应用的架构（不适合多个子应用共存）；若父应用数据有变化而子应用又没触发mount，则父应用最新的数据无法同步回子应用。想要做到多子应用共存且父动态传子，子应用还是需要用到qiankun提供的onGlobalStateChange的api监听才行，
+
+作者：fengxianqi
+链接：https://juejin.cn/post/6875462470593904653
+来源：稀土掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+ */

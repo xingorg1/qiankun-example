@@ -65,6 +65,14 @@ export default {
       }
     },
     listenRouterChange () {
+      /**
+       * 子应用跳转是通过history.pushState(null, '/sub-react', '/sub-react')的，因此父应用在mounted时想办法监听到history.pushState就可以了。由于history.popstate只能监听back/forward/go却不能监听history.pushState，所以需要额外全局复写一下history.pushState事件。
+
+        作者：fengxianqi
+        链接：https://juejin.cn/post/6875462470593904653
+        来源：稀土掘金
+        著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+       */
       const _wr = function (type) {
         const orig = history[type]
         return function () {

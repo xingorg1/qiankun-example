@@ -1,8 +1,8 @@
 const { name } = require('../package.json')
-
+// 子应用`devServer`端口修改,跨域`headers`和`output`配置 
 module.exports = {
   publicPath: '/subapp/sub-vue',
-  transpileDependencies: ['common'],
+  transpileDependencies: ['common'], // 由于common是不经过babel和pollfy的，所以引用者需要在webpack打包时「显性指定该模块需要编译」
   chainWebpack: config => config.resolve.symlinks(false),
   configureWebpack: {
     output: {
