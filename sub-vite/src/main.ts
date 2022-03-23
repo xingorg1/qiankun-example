@@ -15,8 +15,8 @@ import {
 
 // createApp(App).use(router).mount('#app')
 
-// let router;
-let instance: Vue.App<Element>;
+let router = null;
+let instance: Vue.App<Element> | null;
 
 declare global {
   interface Window {
@@ -34,7 +34,7 @@ function render(props: any) {
   const history = createWebHistory(
     qiankunWindow.__POWERED_BY_QIANKUN__ ? "/sub-vite" : "/"
   );
-  const router = createRouter({
+  router = createRouter({
     history,
     routes,
   });
@@ -56,7 +56,9 @@ renderWithQiankun({
   },
   unmount(props: any) {
     console.log("unmount");
-    instance.unmount();
+    instance && instance.unmount();
+    instance = null
+    router = null
   },
 });
 
